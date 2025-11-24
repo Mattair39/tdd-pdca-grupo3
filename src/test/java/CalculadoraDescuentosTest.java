@@ -9,18 +9,18 @@ public class CalculadoraDescuentosTest {
     // Prueba: Aplicar 15% de descuento sobre $200 debe resultar en $170
     // Cálculo: 200 - (200 * 0.15) = 200 - 30 = 170
     @Test
-    public void testDescuentoPorcentaje(){
+    public void testDescuentoPorcentaje() {
         double resultado = calc.aplicarDescuentoPorcentaje(200, 15);
-        assertEquals(170, resultado);
+        assertEquals(170, resultado, 0.01);
     }
     
     // ===== CICLO 2: Descuento Fijo =====
     // Prueba: Restar $12 fijos de $80 debe resultar en $68
     // Cálculo: 80 - 12 = 68
     @Test
-    public void testDescuentoFijo(){
+    public void testDescuentoFijo() {
         double resultado = calc.aplicarDescuentoFijo(80, 12);
-        assertEquals(68, resultado);
+        assertEquals(68, resultado, 0.01);
     }
     
     // ===== CICLO 3: Descuento Acumulado =====
@@ -28,9 +28,9 @@ public class CalculadoraDescuentosTest {
     // Cálculo: Paso 1: 150 - (150 * 0.20) = 150 - 30 = 120
     //          Paso 2: 120 - 8 = 112
     @Test
-    public void testDescuentoAcumulado(){
+    public void testDescuentoAcumulado() {
         double resultado = calc.aplicarDescuentoAcumulado(150, 20, 8);
-        assertEquals(112, resultado);
+        assertEquals(112, resultado, 0.01);
     }
     
     // ===== CICLO 4: Calcular Precio Final =====
@@ -38,20 +38,20 @@ public class CalculadoraDescuentosTest {
     // Cálculo: Paso 1: 250 - (250 * 0.25) = 250 - 62.5 = 187.5
     //          Paso 2: 187.5 - 15 = 172.5
     @Test
-    public void testCalcularPrecioFinal(){
+    public void testCalcularPrecioFinal() {
         double resultado = calc.calcularPrecioFinal(250, 25, 15);
-        assertEquals(172.5, resultado);
+        assertEquals(172.5, resultado, 0.01);
     }
     
     // Prueba: Validar que valores negativos se conviertan a 0 y positivos se mantengan
     // Cálculo: -30 → 0 (no puede haber precios negativos)
     //          75 → 75 (valor positivo se mantiene)
     @Test
-    public void testValidarPrecioNegativo(){
+    public void testValidarPrecioNegativo() {
         double resultadoNegativo = calc.validarPrecioNegativo(-30);
-        assertEquals(0, resultadoNegativo);
+        assertEquals(0, resultadoNegativo, 0.01);
         
         double resultadoPositivo = calc.validarPrecioNegativo(75);
-        assertEquals(75, resultadoPositivo);
+        assertEquals(75, resultadoPositivo, 0.01);
     }
 }
