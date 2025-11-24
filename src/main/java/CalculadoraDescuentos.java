@@ -14,12 +14,12 @@ public class CalculadoraDescuentos {
         return aplicarDescuentoFijo(conPorcentaje, descuento);
     }
     
-    public double verificarPrecioFinal(double precioOriginal, double porcentaje) {
-        return aplicarDescuentoPorcentaje(precioOriginal, porcentaje);
+    public double calcularPrecioFinal(double montoOriginal, double porcentaje, double descuentoFijo) {
+        return aplicarDescuentoAcumulado(montoOriginal, porcentaje, descuentoFijo);
     }
     
-    public double validarPrecioNegativo(double montoFinal){
-        if(montoFinal < 0){
+    public double validarPrecioNegativo(double montoFinal) {
+        if (montoFinal < 0) {
             return 0;
         }
         return montoFinal;
