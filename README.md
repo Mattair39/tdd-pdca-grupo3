@@ -7,7 +7,7 @@ Proyecto de taller práctico que implementa una calculadora de descuentos aplica
 1. **Gabriel Arguello** - Ciclo 1: Descuento Porcentual
 2. **Joaquín Chacón** - Ciclo 2: Descuento Fijo
 3. **Priscila Zuñiga** - Ciclo 3: Descuento Acumulado
-4. **Diego Vega** - Ciclo 4: Validaciones y Casos Especiales
+4. **Diego Vega y Nicolas Negrete ** - Ciclo 4: Validaciones y Casos Especiales
 
 ## Funcionalidades Implementadas
 
